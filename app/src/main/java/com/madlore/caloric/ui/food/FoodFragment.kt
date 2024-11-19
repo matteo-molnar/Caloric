@@ -1,4 +1,4 @@
-package com.madlore.caloric.ui.home
+package com.madlore.caloric.ui.food
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.madlore.caloric.databinding.FragmentHomeBinding
+import com.madlore.caloric.databinding.FragmentFoodBinding
 
-class HomeFragment : Fragment() {
+class FoodFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentFoodBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+        val foodViewModel =
+            ViewModelProvider(this).get(FoodViewModel::class.java)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentFoodBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textFood
+        foodViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

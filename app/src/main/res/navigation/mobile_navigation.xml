@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_diary">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.madlore.caloric.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_diary"
+        android:name="com.madlore.caloric.ui.diary.DiaryFragment"
+        android:label="@string/title_diary"
+        tools:layout="@layout/fragment_diary" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.madlore.caloric.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_macros"
+        android:name="com.madlore.caloric.ui.macros.MacrosFragment"
+        android:label="@string/title_macros"
+        tools:layout="@layout/fragment_macros" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.madlore.caloric.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_food"
+        android:name="com.madlore.caloric.ui.food.FoodFragment"
+        android:label="@string/title_food"
+        tools:layout="@layout/fragment_food" />
 </navigation>

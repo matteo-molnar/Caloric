@@ -1,13 +1,13 @@
-package com.madlore.caloric.ui.notifications
+package com.madlore.caloric.ui.diary
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class DiaryViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is diary Fragment"
     }
     val text: LiveData<String> = _text
 }
